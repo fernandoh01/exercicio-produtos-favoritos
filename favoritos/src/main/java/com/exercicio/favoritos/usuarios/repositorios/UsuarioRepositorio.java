@@ -8,4 +8,5 @@ import com.exercicio.favoritos.usuarios.entidades.Usuario;
 
 public interface UsuarioRepositorio extends JpaRepository<Usuario, Long>{
     Optional<Usuario> findByEmail(String email);
+    Optional<Usuario> findById(Long email);
 }

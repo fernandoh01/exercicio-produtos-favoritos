@@ -21,6 +21,6 @@ public class NumeroFavoritoId implements Serializable {
     @ManyToOne
     private Usuario usuario;
 
-    private int numeroFavorito;
+    private String numeroFavorito;
 
 }
