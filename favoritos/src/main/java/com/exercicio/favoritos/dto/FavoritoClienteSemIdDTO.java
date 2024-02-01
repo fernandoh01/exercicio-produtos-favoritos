@@ -9,6 +9,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @Setter
 @Getter
-public class RequisicaoFavoritoClienteDTO {
-    private String produtoId;
+public class FavoritoClienteSemIdDTO {
+    private String titulo;
+    private String imagem;
+    private Float preco;
 }

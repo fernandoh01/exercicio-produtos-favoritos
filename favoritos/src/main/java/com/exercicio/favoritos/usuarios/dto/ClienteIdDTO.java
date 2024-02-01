@@ -1,4 +1,4 @@
-package com.exercicio.favoritos.dto;
+package com.exercicio.favoritos.usuarios.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,6 +9,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @Setter
 @Getter
-public class RequisicaoFavoritoClienteDTO {
-    private String produtoId;
+public class ClienteIdDTO {
+    private Long clienteId;
 }

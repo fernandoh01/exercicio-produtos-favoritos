@@ -8,14 +8,20 @@ import java.net.URL;
 
 
 import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.exercicio.favoritos.dto.FavoritoClienteDTO;
 
 public class ProdutoDados {
+    static Logger logger = LoggerFactory.getLogger(ProdutoDados.class);
+
     private static final String baseURL = "http://challenge-api.luizalabs.com/api/product/%s/";
     public static FavoritoClienteDTO resgataDadosProduto(String id){
         try {
-            String content = ProdutoDados.getResponse(String.format(baseURL, id));
+            String url = String.format(baseURL, id);
+            logger.info(url);
+            String content = ProdutoDados.getResponse(url);
             JSONObject jo = new JSONObject(content);
             FavoritoClienteDTO res = new FavoritoClienteDTO(id, jo.getString("title"),jo.getString("image")
             ,jo.getFloat("price"));    
