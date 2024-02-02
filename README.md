@@ -18,7 +18,7 @@ Este projeto objetiva um prototipo para fazer interface de usuários com seus pr
 
 **Observações:**
 - pode-se executar `mvn test` para rodar testes unitários
-- todos endpoints são protegidos por x-api-key. Para este projeto está setado hardcoded como access_token. Necessário adicionar no header do cliente.
+- todos endpoints são protegidos por **x-api-key**. Para este projeto está setado hardcoded como **access_token**. Necessário adicionar no header do cliente.
 
 ### Débitos
 1. Perfil de construção da aplicação em modo de produção
