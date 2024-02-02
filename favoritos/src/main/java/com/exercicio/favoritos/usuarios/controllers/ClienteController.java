@@ -24,6 +24,8 @@ import com.exercicio.favoritos.usuarios.dto.ClienteIdDTO;
 import com.exercicio.favoritos.usuarios.entidades.Usuario;
 import com.exercicio.favoritos.usuarios.repositorios.UsuarioRepositorio;
 
+import jakarta.validation.Valid;
+
 @RestController
 public class ClienteController {
 
@@ -73,7 +75,7 @@ public class ClienteController {
     }
 
     @PostMapping("/clientes")
-    ResponseEntity<Usuario> novoCliente(@RequestBody ClienteDto novoCliente){
+    ResponseEntity<Usuario> novoCliente(@RequestBody @Valid ClienteDto novoCliente){
         try {
             Optional<Usuario> jaCadastrado = this.usuarioRepositorio.findByEmail(novoCliente.getEmail());
             if(jaCadastrado.isPresent()){
